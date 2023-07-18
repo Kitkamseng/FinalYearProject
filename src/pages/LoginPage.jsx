@@ -9,6 +9,9 @@ function LoginPage() {
   const handleSignUpClick = () => {
     navigate('/signup');
   }
+  const handleLoginClick = () => {
+    navigate('/homepage');
+  }
 
   return (
     <div className='main-container'>
@@ -24,8 +27,15 @@ function LoginPage() {
           <span></span>
           <label>Password</label>
         </div>
+
         <div class='pass'>Forgot Password?</div>
-        <input type='submit' value="Login" />
+
+        <input 
+          type='submit' 
+          value="Login" 
+          onClick={handleLoginClick}  
+        />
+
         <div class='signup_link'>
           Not a member? <a href='#' onClick={handleSignUpClick}>Sign Up</a>
         </div>
