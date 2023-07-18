@@ -6,7 +6,7 @@ function LoginPage() {
 
   let navigate = useNavigate();
 
-  const handleSignUpClick = () =>{
+  const handleSignUpClick = () => {
     navigate('/signup');
   }
 
