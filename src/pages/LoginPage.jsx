@@ -1,7 +1,15 @@
 import React from 'react';
 import './LoginPage.css';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
+
+  let navigate = useNavigate();
+
+  const handleSignUpClick = () =>{
+    navigate('/signup');
+  }
+
   return (
     <div className='main-container'>
        <h1>Log In</h1>
@@ -19,7 +27,7 @@ function LoginPage() {
         <div class='pass'>Forgot Password?</div>
         <input type='submit' value="Login" />
         <div class='signup_link'>
-          Not a member? <a href='#'>Sign Up</a>
+          Not a member? <a href='#' onClick={handleSignUpClick}>Sign Up</a>
         </div>
        </form>
     </div>
