@@ -10,7 +10,7 @@ function LoginPage() {
     navigate('/signup');
   }
   const handleLoginClick = () => {
-    navigate('/homepage');
+    navigate('/');
   }
 
   return (
