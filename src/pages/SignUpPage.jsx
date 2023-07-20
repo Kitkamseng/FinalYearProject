@@ -16,7 +16,7 @@ function LoginPage() {
   }
 
   return (
-    <div className='main-container'>
+    <div className='signup-container'>
        <h1>Sign Up</h1>
        <form method='post'>
        <div class='txt_field'>

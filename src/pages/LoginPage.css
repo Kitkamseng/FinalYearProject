@@ -7,7 +7,7 @@ body{
     overflow: hidden;
 }
 
-.main-container{
+.login-container{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -17,13 +17,13 @@ body{
     border-radius: 10px;
 }
 
-.main-container h1{
+.login-container h1{
     text-align: center;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
 }
 
-.main-container form{
+.login-container form{
     padding: 0 40px;
     box-sizing: border-box;
 }
