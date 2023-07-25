@@ -1,6 +1,7 @@
 import React from "react";
 import './HomePage.css';
 import Header from './../components/Header';
+import UserTable from "./UserTable";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBusinessTime, faDesktop, faHeart, faLanguage, faMusic, faFutbol, faPalette, faTv } from '@fortawesome/free-solid-svg-icons';
@@ -93,9 +94,11 @@ function HomePage(){
                     </div>
 
                 </div>
-
             </div>
+            <br />
+            <UserTable />
         </div>
+
         </>
 
     );
