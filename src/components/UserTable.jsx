@@ -1,10 +1,13 @@
 import './UserTable.css';
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link, useParams } from 'react-router-dom';
 
 
 
 function UserTable(){
+
+    const {id} = useParams();
 
     const[users, setUsers] = useState([]);
 
@@ -17,6 +20,11 @@ function UserTable(){
         setUsers(result.data);
     }
 
+    const deleteUser = async(id) => {
+        await axios.delete(`http://localhost:8080/user/${id}`)
+        loadUsers()
+    }
+
     return(
         <>
             <div className="user-container">
@@ -25,9 +33,9 @@ function UserTable(){
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Name</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Password</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -38,13 +46,26 @@ function UserTable(){
                                         <th scope="row" key={index}>
                                             {index + 1}
                                         </th>
-                                        <td>{user.name}</td>
                                         <td>{user.username}</td>
                                         <td>{user.email}</td>
+                                        <td>{user.password}</td>
                                         <td>
-                                            <button className='btn btn-primary mx-2'>View</button>
-                                            <button className='btn btn-outline-primary mx-2'>Edit</button>
-                                            <button className='btn btn-primary mx-2'>Delete</button>
+                                            &nbsp;
+                                            &nbsp;
+                                            <Link 
+                                                className='btn btn-outline-primary mx-2'
+                                                to={`/edituser/${user.id}`}
+                                            >
+                                                Edit
+                                            </Link>
+                                            &nbsp;
+                                            &nbsp;
+                                            <button 
+                                                className='btn btn-primary mx-2'
+                                                onClick={() => deleteUser(user.id)}
+                                            >
+                                                Delete
+                                            </button>
                                         </td>
                                     </tr>
                                 ))

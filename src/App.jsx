@@ -4,6 +4,7 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
+import EditUser from './Users/EditUser';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path='/login' Component={LoginPage} />
         <Route exact path='/signup' Component={SignUpPage} />
         <Route exact path='/adminpage' Component={AdminPage} />
+        <Route exact path='/edituser/:id' Component={EditUser} />
       </Routes>
     </Router>
   );
