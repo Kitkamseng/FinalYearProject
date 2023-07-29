@@ -1,9 +1,8 @@
 import './SignUpPage.css';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
-import { async } from 'q';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function SignUpPage() {
@@ -24,19 +23,28 @@ function SignUpPage() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/user", user);
-    navigate("/");
-    console.log(e);
-  }
+    try{
+      await axios.post("http://localhost:8080/user", user);
+      navigate("/");
+      console.log(e);
+    } catch (error) {
+      
+      console.error("Signup failed: ", error);
 
-  // const [password, setPassword] = useState("");
-  // const [visible, setVisible] = useState(false);
+      if(error.response && error.response.status === 409){
+        toast.error("This username already exists. Please choose a different one");
+      } else {
+        toast.error("An error occurred while signing up")
+      }
+    }
+  };
 
   const handleLogInClick = () => {
-    navigate('/login');
+    navigate('/');
   }
 
   return (
+    <>
     <div className='signup-container'>
        <h1>Sign Up</h1>
        <form 
@@ -46,7 +54,6 @@ function SignUpPage() {
           <input 
             type={"text"}
             className='form-control'
-            placeholder='Enter Your Email'
             name='email'
             value={email}
             onChange={(e)=>onInputChange(e)}
@@ -58,7 +65,6 @@ function SignUpPage() {
           <input 
             type={"text"}
             className='form-control'
-            placeholder='Enter Your UserName'
             name='username'
             value={username}
             onChange={(e)=>onInputChange(e)}
@@ -69,9 +75,8 @@ function SignUpPage() {
 
         <div class='txt_field'>
           <input 
-            type={"text"}
+            type={"password"}
             className='form-control'
-            placeholder='Enter Your Password'
             name='password'
             value={password}
             onChange={(e)=>onInputChange(e)}
@@ -79,22 +84,6 @@ function SignUpPage() {
           <span></span>
           <label>Password</label>
         </div>
-
-        {/* <div class='txt_field'>
-          <input 
-            value={newPassword}
-            onChange={(e) => onInputChange(e)}
-            type={visible ? "text" : "newPassword"}
-            id="password"
-            // onChange={e => setPassword(e.target.value)}
-          />
-          <label>Password</label>
-          <div className='eye-toggle' onClick={() => setVisible(!visible)}>
-            {
-              visible ? <EyeOutlined /> : <EyeInvisibleOutlined />
-            }
-          </div>
-        </div> */}
         
         <input type='submit' value="Register" />
 
@@ -103,6 +92,8 @@ function SignUpPage() {
         </div>
        </form>
     </div>
+    <ToastContainer position='bottom-right'/>
+    </>
   );
 } 
 

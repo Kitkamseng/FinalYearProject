@@ -5,16 +5,35 @@ import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import EditUser from './Users/EditUser';
+import { useState } from 'react';
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <Router>
       <Routes>
-        <Route exact path='/' Component={HomePage} />
-        <Route exact path='/login' Component={LoginPage} />
-        <Route exact path='/signup' Component={SignUpPage} />
-        <Route exact path='/adminpage' Component={AdminPage} />
-        <Route exact path='/edituser/:id' Component={EditUser} />
+        <Route 
+          exact path='/' 
+          Component={LoginPage} 
+        />
+        <Route 
+          exact path='/homepage' 
+          Component={HomePage} 
+        />
+        <Route 
+          exact path='/signup' 
+          Component={SignUpPage} 
+        />
+        <Route 
+          exact path='/adminpage' 
+          Component={AdminPage} 
+        />
+        <Route 
+          exact path='/edituser/:id' 
+          Component={EditUser} 
+        />
       </Routes>
     </Router>
   );

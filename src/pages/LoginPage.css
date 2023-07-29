@@ -8,6 +8,10 @@ body{
 }
 
 .login-container{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
     position: absolute;
     top: 50%;
     left: 50%;
