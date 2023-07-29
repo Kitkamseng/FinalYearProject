@@ -11,10 +11,6 @@ function Header(){
 
     let navigate = useNavigate();
 
-    const testOne = () => {
-        navigate('/login');
-    }
-
     const adminPage = () => {
         navigate('/adminpage');
     }
@@ -44,7 +40,6 @@ function Header(){
                     <FontAwesomeIcon 
                         icon={faRocketchat} 
                         size="3x" 
-                        onClick={testOne}
                     />
                 </div>
                 <div className="personal-box">

@@ -3,8 +3,8 @@ import axios from "axios";
 import './LoginPage.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function LoginPage() {
 
@@ -12,9 +12,6 @@ function LoginPage() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  // const [password, setPassword] = useState("");
-  // const [visible, setVisible] = useState(false);
 
   const handleSignUpClick = () => {
     navigate('/signup');
@@ -30,19 +27,20 @@ function LoginPage() {
         username: username,
         password: password,
       });
-      // Assuming the backend returns a token upon successful login
+
       const token = response.data.token;
-      // Store the token in local storage or a session cookie
+
       localStorage.setItem("authToken", token);
-      // Redirect the user to a dashboard or home page
-      navigate('/');
-      console.log("e");
+
+      navigate('/homepage');
     } catch (error) {
       console.error("Login failed here.", error);
-      // Handle login failure, e.g., show an error message to the user
+      toast.error("Invalid Credentials. Please check again");
     }
   };
+  
   return (
+    <>
     <div className='login-container'>
        <h1>Log In</h1>
        <form onSubmit={handleLogin}>
@@ -67,22 +65,6 @@ function LoginPage() {
           <label>Password</label>
         </div>
 
-        
-        {/* <div class='txt_field'>
-          <input 
-            value={password}
-            type={visible ? "text" : "password"}
-            id="password"
-            onChange={e => setPassword(e.target.value)}
-          />
-          <label>Password</label>
-          <div className='eye-toggle' onClick={() => setVisible(!visible)}>
-            {
-              visible ? <EyeOutlined /> : <EyeInvisibleOutlined />
-            }
-          </div>
-        </div> */}
-
         <div className='pass'>Forgot Password?</div>
 
         <button type="submit">Login</button>
@@ -92,6 +74,8 @@ function LoginPage() {
         </div>
        </form>
     </div>
+    <ToastContainer position='bottom-right' />
+    </>
   );
 } 
 
