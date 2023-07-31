@@ -5,6 +5,7 @@ import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import EditUser from './Users/EditUser';
+import PostCreation from './pages/PostCreation';
 import { useState } from 'react';
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
         <Route 
           exact path='/edituser/:id' 
           Component={EditUser} 
+        />
+        <Route 
+          exact path='/postcreation' 
+          Component={PostCreation} 
         />
       </Routes>
     </Router>
