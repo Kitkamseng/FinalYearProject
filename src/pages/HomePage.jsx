@@ -1,6 +1,7 @@
 import React from "react";
 import './HomePage.css';
 import Header from './../components/Header';
+import PersonalProjects from "../components/PersonalProjects";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBusinessTime, faDesktop, faHeart, faLanguage, faMusic, faFutbol, faPalette, faTv } from '@fortawesome/free-solid-svg-icons';
@@ -95,6 +96,8 @@ function HomePage(){
                 </div>
             </div>
             <br />
+            <PersonalProjects />
+
         </div>
 
         </>
