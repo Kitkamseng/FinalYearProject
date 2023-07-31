@@ -15,6 +15,10 @@ function Header(){
         navigate('/adminpage');
     }
 
+    const homePage = () =>{
+        navigate('/homepage');
+    }
+
     return(
         <div className="header-container">
             {/* <img 
@@ -24,7 +28,10 @@ function Header(){
             <div className="header-icon"> 
                 Logo
             </div>
-            <div className="header-name">
+            <div 
+                className="header-name"
+                onClick={homePage}
+            >
                 VOTE
             </div>
             
