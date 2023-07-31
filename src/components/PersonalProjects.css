@@ -1,0 +1,42 @@
+.personal-container{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    background-color: white;
+
+    width: 90%;
+
+    margin-top: 30px;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+}
+
+.personal-project-title{
+    font-size: 30px;
+
+    margin: 10px;
+}
+
+.card-containers{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    margin: 10px;
+}
+
+.card{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    width: 20%;
+
+    margin: 10px;
+}
