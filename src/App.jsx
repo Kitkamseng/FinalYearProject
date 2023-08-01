@@ -7,6 +7,7 @@ import AdminPage from './pages/AdminPage';
 import EditUser from './Users/EditUser';
 import PostCreation from './pages/PostCreation';
 import SelectionPage from './pages/SelectionPage';
+import AgileBoard from './pages/AgileBoard';
 import { useState } from 'react';
 
 function App() {
@@ -43,6 +44,10 @@ function App() {
         <Route 
           exact path='/selectionpage' 
           Component={SelectionPage} 
+        />
+        <Route 
+          exact path='/agileboardcreation' 
+          Component={AgileBoard} 
         />
       </Routes>
     </Router>

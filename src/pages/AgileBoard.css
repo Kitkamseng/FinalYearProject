@@ -1,0 +1,167 @@
+.agile-board-container{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.agile-form-box{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 90%;
+    /* height: 300px; */
+
+    margin: 10px;
+}
+
+
+.agile-form-title{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+
+    font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+
+    width: 90%;
+
+    margin: 10px;
+}
+
+.agile-columns{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.agile-form-column{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    width: 25%;
+
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.agile-form-column input{
+    margin: 10px;
+    width: 90%;
+    height: 30px;
+}
+
+.column-title{
+    font-size: 25px;
+
+    margin: 10px;
+}
+
+.agile-rows{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.agile-form-row{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    width: 25%;
+
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.agile-form-row input{
+    margin: 10px;
+    width: 90%;
+    height: 30px;
+}
+
+.row-title{
+    font-size: 25px;
+
+    margin: 10px;
+}
+
+.submit-box{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    width: 50%;
+}
+
+.agile-form-box button{
+    border-radius: 20px;
+
+    width: 50%;
+    margin: 20px;
+    min-height: 50px;
+
+    transition: transform 0.3s;
+
+}
+
+.agile-form-box button:hover{
+    transform: scale(1.1);
+    transition-delay: 0.1s;
+}
+
+.create-agile-button{
+    background-color: green;
+    color: white;
+}
+
+.cancel-button{
+    background-color: red;
+    color: white;
+}

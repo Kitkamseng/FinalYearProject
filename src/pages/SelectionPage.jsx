@@ -9,6 +9,10 @@ function SelectionPage() {
 
     let navigate = useNavigate();
 
+    const handleAgileBoard = () => {
+        navigate('/agileboardcreation')
+    }
+
     const handlePostCreate = () => {
         navigate('/postcreation');
     }
@@ -18,7 +22,10 @@ function SelectionPage() {
             <Header />
             <div className="selection-container">
                 <div className="selection-box">
-                    <div className="agile-board-box">
+                    <div 
+                        className="agile-board-box"
+                        onClick={handleAgileBoard}
+                    >
                         <div className="board-title">
                         Agile Board
                         </div>
