@@ -93,11 +93,11 @@
 }
 
 .board-title{
-    border-color: black;
+    /* border-color: black;
     border-width: 2px;
-    border-style: solid;
+    border-style: solid; */
 
-    font-size: 20px;
+    font-size: 30px;
     
     margin: 10px;
 }
