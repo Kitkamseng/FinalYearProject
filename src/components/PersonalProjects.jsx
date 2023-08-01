@@ -10,7 +10,7 @@ function PersonalProjects(){
 
 
     const handleCreatePost= () => {
-        navigate('/postcreation');
+        navigate('/selectionpage');
     }
 
     return (

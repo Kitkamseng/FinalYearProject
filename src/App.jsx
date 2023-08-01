@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import EditUser from './Users/EditUser';
 import PostCreation from './pages/PostCreation';
+import SelectionPage from './pages/SelectionPage';
 import { useState } from 'react';
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
         <Route 
           exact path='/postcreation' 
           Component={PostCreation} 
+        />
+        <Route 
+          exact path='/selectionpage' 
+          Component={SelectionPage} 
         />
       </Routes>
     </Router>
