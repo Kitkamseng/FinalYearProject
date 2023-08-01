@@ -1,0 +1,123 @@
+.selection-container{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.selection-box{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    width: 60%;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.agile-board-box{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    width: 50%;
+    height: 90%;
+
+    transition: transform 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 5px;
+}
+
+.agile-board-box:hover{
+    transform: scale(0.9);
+    transition-delay: 0.1s;
+}
+
+.agile-board-box img {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+
+    width: 80%;
+    height: 100%;
+
+    margin: 10px;
+}
+
+.agile-board-box button{
+    border-radius: 20px;
+
+    min-height: 50px;
+
+    margin: 10px;
+}
+
+
+.post-card{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    width: 50%;
+    height: 90%;
+
+    transition: transform 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 5px;
+}
+
+.post-card:hover{
+    transform: scale(0.9);
+    transition-delay: 0.1s;
+}
+
+.board-title{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    font-size: 20px;
+    
+    margin: 10px;
+}
+
+.post-card img{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+
+    width: 80%;
+    height: 100%;
+
+    margin: 10px;
+}
+
+.post-card button{
+    border-radius: 20px;
+
+    min-height: 50px;
+
+    margin: 10px;
+}
