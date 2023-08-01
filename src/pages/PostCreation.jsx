@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import './PostCreation.css';
 import Header from './../components/Header';
 import ImageDropBox from "../components/ImageDropBox";
+import { useNavigate } from "react-router-dom";
 
 
 function PostCreation(){
+    let navigate = useNavigate();
+
     const [imageFile, setImageFile] = useState(null);
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -20,6 +23,11 @@ function PostCreation(){
         // Don't forget to handle the image file on your backend API as well
       };
 
+
+    const handleCancelButton = () => {
+        navigate('/selectionpage');
+    }
+    
     return (
         <>
             <Header />
@@ -54,7 +62,19 @@ function PostCreation(){
                                 rows={4}
                                 />
                             </div>
-                            <button type="submit">Create Post</button>
+                            <div className="submit-box">
+                                <button 
+                                    className="create-button"
+                                >
+                                    Create Post
+                                </button>
+                                <button 
+                                    className="cancel-button"
+                                    onClick={handleCancelButton}
+                                >
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

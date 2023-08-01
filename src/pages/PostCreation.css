@@ -72,21 +72,6 @@
     width: 100%;
 }
 
-.post-images-container button{
-
-    border-radius: 10px;
-
-    background-color: green;
-    color: white;
-
-    width: 30%;
-    height: 40px;
-
-    margin-top: 30px;
-    align-self: flex-end;
-    
-}
-
 
 .image-description-container{
     /* border-color: black;
@@ -107,5 +92,43 @@
 
     margin: 5px;
 
+}
+
+.submit-box{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    width: 50%;
+}
+
+.create-button{
+    border-radius: 10px;
+    width: 30%;
+    height: 40px;
+    margin: 10px;
+    margin-top: 30px;
+
+    background-color: green;
+    color: white;
+
+}
+
+
+.cancel-button{
+    border-radius: 10px;
+    width: 30%;
+    height: 40px;
+    margin: 10px;
+    margin-top: 30px;
+
+
+    background-color: red;
+    color: white;
 }
 
