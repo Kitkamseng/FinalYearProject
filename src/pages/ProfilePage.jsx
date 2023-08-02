@@ -1,6 +1,7 @@
 import React from "react";
 import './ProfilePage.css';
 import Header from './../components/Header';
+import ProjectCard from "../components/ProjectCard";
 
 function ProfilePage(){
     return (
@@ -31,12 +32,7 @@ function ProfilePage(){
                         To Do: 
                     </div>
                     <div className="project-space-container">
-                        <div className="temp-project-box">
-                            Box 1
-                        </div>
-                        <div className="temp-project-box">
-                            Box 2
-                        </div>
+                        <ProjectCard />
                     </div>
                 </div>
             </div>

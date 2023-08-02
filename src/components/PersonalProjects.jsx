@@ -1,6 +1,7 @@
 import React from "react";
 import './PersonalProjects.css';
 import HomePageCards from './HomePageProject';
+import ProjectCard from "./ProjectCard";
 import { useNavigate } from "react-router-dom";
 
 
@@ -26,9 +27,7 @@ function PersonalProjects(){
                 </button>
             </div>
             <div className="card-containers">
-                <div className="card">
-                    <HomePageCards />
-                </div>
+                <ProjectCard />
             </div>
         </div>
         </>
