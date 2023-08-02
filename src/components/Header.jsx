@@ -19,6 +19,10 @@ function Header(){
         navigate('/homepage');
     }
 
+    const profilePage = () => {
+        navigate('/profilepage');
+    }
+
     return(
         <div className="header-container">
             {/* <img 
@@ -56,7 +60,7 @@ function Header(){
                     <FontAwesomeIcon 
                         icon={faUser} 
                         size="3x" 
-                        onClick={adminPage}
+                        onClick={profilePage}
                     />
                 </div>
             </div>
