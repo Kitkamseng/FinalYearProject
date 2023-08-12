@@ -25,7 +25,7 @@ function HomePage(){
                 <div className="cat-title">
                     CATEGORIES
                     <div className="cat-boxes">
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Business
                             </div>
@@ -33,7 +33,7 @@ function HomePage(){
                                 <FontAwesomeIcon icon={faBusinessTime} size="2x"/>
                             </div>
                         </div>
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Programming
                             </div>
@@ -41,7 +41,7 @@ function HomePage(){
                                 <FontAwesomeIcon icon={faDesktop}  size="2x" />
                             </div>
                         </div>
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Lifestyle
                             </div>
@@ -49,7 +49,7 @@ function HomePage(){
                                 <FontAwesomeIcon icon={faHeart} size="2x"/>
                             </div>
                         </div>
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Languages
                             </div>
@@ -59,7 +59,7 @@ function HomePage(){
                         </div>
                     </div>
                     <div className="cat-boxes">
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Music
                             </div>
@@ -67,7 +67,7 @@ function HomePage(){
                                 <FontAwesomeIcon icon={faMusic} size="2x"/>
                             </div>
                         </div>
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Sports
                             </div>
@@ -75,7 +75,7 @@ function HomePage(){
                                 <FontAwesomeIcon icon={faFutbol} size="2x"/>
                             </div>
                         </div>
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Arts
                             </div>
@@ -83,7 +83,7 @@ function HomePage(){
                                 <FontAwesomeIcon icon={faPalette} size="2x" />
                             </div>
                         </div>
-                        <div className="box" onClick={handleCatBox}>
+                        <div className="box" >
                             <div className="box-title">
                                 Tv Shows
                             </div>
