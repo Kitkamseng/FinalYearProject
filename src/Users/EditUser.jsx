@@ -2,7 +2,6 @@ import './../pages/SignUpPage.css';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
-import { async } from 'q';
 import axios from 'axios';
 
 

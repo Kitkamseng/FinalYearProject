@@ -28,9 +28,15 @@ function LoginPage() {
         password: password,
       });
 
-      const token = response.data.token;
+      console.log(response.data);
 
+      const token = response.data.token;
+      const userId = response.data.userId;
+
+      
       localStorage.setItem("authToken", token);
+      localStorage.setItem("userId", userId);
+
 
       navigate('/homepage');
     } catch (error) {

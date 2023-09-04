@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './HomePage.css';
 import Header from './../components/Header';
 import PersonalProjects from "../components/PersonalProjects";
@@ -12,9 +12,14 @@ function HomePage(){
 
     let navigate = useNavigate();
 
+    const userId = localStorage.getItem("userId");
+
     const handleCatBox = () => {
         navigate('/signup');
     }
+
+
+    console.log(userId);
 
     return(
         <>

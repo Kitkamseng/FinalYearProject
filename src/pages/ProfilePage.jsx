@@ -1,24 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './ProfilePage.css';
+import defaultProfilePicture from './../images/ProfilePicture.png';
 import Header from './../components/Header';
 import ProjectCard from "../components/ProjectCard";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function ProfilePage(){
+
+    const userId = localStorage.getItem("userId");
+
+    console.log(userId)
+
+    const[user, setUser] = useState({
+        email: "", 
+        username: "",
+        password: ""
+    });
+
+    const loadUser = async () => {
+        const result = await axios.get(`http://localhost:8080/user/${userId}`)
+        console.log(result.data)
+        setUser(result.data);
+    }
+
+
+    useEffect(() => {
+        loadUser();
+    }, []);
+
     return (
         <>
             <Header />
             <div className="profile-container">
-                Hello
                 <div className="profile-display-container">
                     <div className="profile-image">
-                        Image here
+                        <img src={defaultProfilePicture} alt="Profile"/>
                     </div>
                     <div className="profile-details">
                         <div className="profile-username">
-                            NAME
+                            {user.username}
                         </div>
                         <div className="profile-id-tag">
-                            @NAME
+                            @{user.username}
                         </div>
                         <button 
                             className="edit-profile"
