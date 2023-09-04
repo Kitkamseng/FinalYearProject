@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Header.css';
 import VoteIcon from '../images/VoteIcon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocketchat } from '@fortawesome/free-brands-svg-icons';
 import { faBell, faUser } from '@fortawesome/free-regular-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 function Header(){
+
+    const {id} = useParams();
+
+    const userId = localStorage.getItem("userId");
 
     let navigate = useNavigate();
 
@@ -20,8 +24,13 @@ function Header(){
     }
 
     const profilePage = () => {
-        navigate('/profilepage');
+        navigate(`/profilepage/${userId}`);
     }
+
+
+    // useEffect(() => {
+    //     console.log(id);
+    // }, [])
 
     return(
         <div className="header-container">

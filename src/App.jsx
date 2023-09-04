@@ -51,7 +51,7 @@ function App() {
           Component={AgileBoard} 
         />
         <Route 
-          exact path='/profilepage' 
+          exact path='/profilepage/:id' 
           Component={ProfilePage} 
         />
       </Routes>
