@@ -18,6 +18,13 @@
     width: 25%;
 
     margin: 5px;
+
+    transition: transform 0.3s;
+}
+
+.project-card-container:hover{
+    transform: scale(0.9);
+    transition-delay: 0.1s;
 }
 
 .project-card-title{

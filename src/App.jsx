@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import HomePage from './pages/HomePage';
@@ -9,7 +10,7 @@ import PostCreation from './pages/PostCreation';
 import SelectionPage from './pages/SelectionPage';
 import AgileBoard from './pages/AgileBoard';
 import ProfilePage from './pages/ProfilePage';
-import { useState } from 'react';
+import EditPostCreation from './pages/EditPostPage';
 
 function App() {
 
@@ -53,6 +54,10 @@ function App() {
         <Route 
           exact path='/profilepage/:id' 
           Component={ProfilePage} 
+        />
+        <Route 
+          exact path='/editpostcreation/:projectId' 
+          Component={EditPostCreation} 
         />
       </Routes>
     </Router>
