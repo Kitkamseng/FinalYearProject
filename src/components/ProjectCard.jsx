@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import './ProjectCard.css';
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function ProjectCard(){
 
+    let navigate = useNavigate();
     const userId = localStorage.getItem("userId");
     const [projects, setProjects] = useState([]);
+    const [selectedProject, setSelectedProject] = useState(null);
 
 
     const loadProjects = async () => {
@@ -20,6 +24,23 @@ function ProjectCard(){
 
     }
 
+    // const handleCardClick = (projectId) => {
+    //     const project = projects.find((project) => project.id === projectId);
+    //     if(project) {
+    //         setSelectedProject(project);
+    //         console.log(project)
+    //         navigate(`/editpostcreation/${projectId}`);
+    //     }
+    // }
+
+    const handleCardClick = (projectId) => {
+        const project = projects.find((project) => project.id === projectId);
+        if (project) {
+            setSelectedProject(project);
+            navigate(`/editpostcreation/${projectId}`, { state: {project}}); 
+        }
+    }
+
 
     useEffect(() => {
         loadProjects();
@@ -30,7 +51,11 @@ function ProjectCard(){
         <div className="project-stack-container">
             {projects.length > 0 ? (
                 projects.map(project => (
-                    <div key={project.id} className="project-card-container">
+                    <div 
+                        key={project.id} 
+                        className="project-card-container"
+                        onClick={() => handleCardClick(project.id)}
+                    >
                         <div className="project-card-title">
                             {project.postTitle}
                         </div>
