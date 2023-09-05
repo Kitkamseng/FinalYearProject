@@ -10,8 +10,6 @@ function ProfilePage(){
 
     const userId = localStorage.getItem("userId");
 
-    console.log(userId)
-
     const[user, setUser] = useState({
         email: "", 
         username: "",
@@ -20,7 +18,6 @@ function ProfilePage(){
 
     const loadUser = async () => {
         const result = await axios.get(`http://localhost:8080/user/${userId}`)
-        console.log(result.data)
         setUser(result.data);
     }
 

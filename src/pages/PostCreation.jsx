@@ -10,15 +10,13 @@ import axios from "axios";
 function PostCreation(){
     let navigate = useNavigate();
 
+    const userId = localStorage.getItem("userId");
+
     const [selectedImage, setSelectedImage] = useState(null);
 
     const [imageFile, setImageFile] = useState(null);
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-
-    // const handleImageAdded = (file) => {
-    //     setImageFile(file);
-    // }
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
@@ -54,12 +52,12 @@ function PostCreation(){
         formData.append('image', selectedImage);
         formData.append('postTitle', title);
         formData.append('postDescription', description);
+        formData.append('userId', userId);
 
-        console.log("Data being sent to the backend:", formData);
-        console.log("postTitle:", formData.get("postTitle"));
-        console.log("postDescription:", formData.get("postDescription"));
-        console.log("image:", formData.get("image"));
-
+        // console.log("Data being sent to the backend:", formData);
+        // console.log("postTitle:", formData.get("postTitle"));
+        // console.log("postDescription:", formData.get("postDescription"));
+        // console.log("image:", formData.get("image"));
 
 
         try{

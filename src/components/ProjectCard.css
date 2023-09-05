@@ -1,3 +1,9 @@
+.project-stack-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .project-card-container{
     border-color: black;
     border-width: 2px;
@@ -5,6 +11,9 @@
     border-radius: 10px;
 
     background-color: lightgrey;
+
+    display: flex;
+    flex-direction: column;
 
     width: 25%;
 
@@ -35,6 +44,14 @@
     
     margin: 10px;
 
+}
+
+.project-card-image img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
 }
 
 .project-card-description{
