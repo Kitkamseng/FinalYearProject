@@ -1,0 +1,48 @@
+.add-project-container{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;
+ */
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+
+
+    width: 25%;
+}
+
+.add-card-container{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    background-color: #E2C876;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 5px;
+
+    transition: transform 0.3s;
+}
+
+.add-card-container:hover{
+    transform: scale(0.9);
+    transition-delay: 0.1s;
+}
+
+.project-add-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-add-icon img{
+    width: 50%;
+}
