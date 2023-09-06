@@ -19,7 +19,7 @@
     border-style: solid;
     border-radius: 10px;
 
-    background-color: white;
+    background-color: #484D22;
 
     width: 90%;
 
@@ -43,7 +43,7 @@
 
 .title-input{
 
-    border-radius: 10px;
+    border-radius: 15px;
     width: 90%;
     font-size: 25px;
     padding: 10px;
@@ -66,13 +66,16 @@
 }
 
 .image-title{
+    color: white;
     margin: 10px;
 }
 
 .image-dropbox-container{
-    border-color: black;
+    border-color: white;
     border-width: 2px;
     border-style: solid;
+    border-radius: 20px;
+
 
     width: 100%;
     min-height: 150px;
@@ -108,6 +111,7 @@
     border-width: 2px;
     border-style: solid; */
 
+    color: white;
     margin: 5px;
 
 }
@@ -127,6 +131,7 @@
 
 .create-button{
     border-radius: 10px;
+    border-color: white;
     width: 30%;
     height: 40px;
     margin: 10px;
@@ -135,11 +140,20 @@
     background-color: green;
     color: white;
 
+    transition: transform 0.3s;
+
+
+}
+
+.create-button:hover{
+    transform: scale(1.1);
+    transition-delay: 0.1s;
 }
 
 
 .cancel-button{
     border-radius: 10px;
+    border-color: white;
     width: 30%;
     height: 40px;
     margin: 10px;
@@ -148,5 +162,12 @@
 
     background-color: red;
     color: white;
+    transition: transform 0.3s;
+
+}
+
+.cancel-button:hover{
+    transform: scale(0.9);
+    transition-delay: 0.1s;
 }
 
