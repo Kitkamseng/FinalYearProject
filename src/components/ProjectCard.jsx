@@ -3,6 +3,7 @@ import './ProjectCard.css';
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import AddProjectCard from "./AddProjectCard";
 
 
 function ProjectCard(){
@@ -70,6 +71,7 @@ function ProjectCard(){
             ) : (
                 <div>No projects found for this user.</div>
             )}
+            <AddProjectCard />
         </div>
         </>
     )
