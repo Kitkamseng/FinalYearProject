@@ -4,7 +4,7 @@ body{
     font-family: monospace;
     background-color: #F0EAD6;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .signup-container{
