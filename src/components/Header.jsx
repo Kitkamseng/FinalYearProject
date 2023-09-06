@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import './Header.css';
-import VoteIcon from '../images/VoteIcon.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRocketchat } from '@fortawesome/free-brands-svg-icons';
-import { faBell, faUser } from '@fortawesome/free-regular-svg-icons';
+import LogoIcon from '../images/LogoImage.png';
+import ProfileIcon from '../images/Profile.png';
+import NotiIcon from '../images/Notification.png';
+import ChatIcon from '../images/Chat.png';
 import { useNavigate, useParams } from 'react-router-dom';
 
 
@@ -34,13 +34,11 @@ function Header(){
 
     return(
         <div className="header-container">
-            {/* <img 
-                src={VoteIcon} 
+            <img 
+                src={LogoIcon} 
                 className="header-icon"
-            /> */}
-            <div className="header-icon"> 
-                Logo
-            </div>
+                onClick={homePage}
+            />
             <div 
                 className="header-name"
                 onClick={homePage}
@@ -57,20 +55,16 @@ function Header(){
 
             <div className="personal-setting">
                 <div className="personal-box">
-                    <FontAwesomeIcon 
-                        icon={faRocketchat} 
-                        size="3x" 
-                    />
+                    <img src={ChatIcon} className="NavIcons" />
                 </div>
                 <div className="personal-box">
-                    <FontAwesomeIcon icon={faBell} size="3x"/>
+                    <img src={NotiIcon} className="NavIcons" />
                 </div>
-                <div className="personal-box">
-                    <FontAwesomeIcon 
-                        icon={faUser} 
-                        size="3x" 
-                        onClick={profilePage}
-                    />
+                <div 
+                    className="personal-box"
+                    onClick={profilePage}
+                >
+                    <img src={ProfileIcon} className="NavIcons" />
                 </div>
             </div>
 
