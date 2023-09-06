@@ -10,25 +10,22 @@ function EditPostCreation(){
     const { projectId } = useParams();
     const { project } = location.state || {};
 
-    console.log(project)
+    const [user, setUser] = useState(null);
 
 
-    // useEffect(() => {
-    //     console.log("projectId here: " , projectId);
-    //     const fetchProject = async() => {
-    //         try{
-    //             const response = await axios.get(`http://localhost:8080/post/${projectId}`);
-    //             setProject(response.data);
-    //             console.log("Fetched project data:", response.data); // Debugging line
-    //         } catch(error){
-    //             console.error("Error fetching project data: ", error);
-    //         }
-    //     }
+    const loadUser = async () => {
+        try{
+            const result = await axios.get(`http://localhost:8080/user/${project.userId}`);
+            setUser(result.data);
+        } catch (error) {
+            console.error("Error fetching user: ", error);
+        }
+    };
 
-    //     if(projectId){
-    //         fetchProject();
-    //     }
-    // }, [projectId]);
+    useEffect(() => {
+        loadUser();
+    }, [])
+
 
     return(
         <>
@@ -47,6 +44,53 @@ function EditPostCreation(){
                     </div>
                     <div className="post-card-description-box">
                         {project ? project.postDescription : "Loading...."}
+                    </div>
+                </div>
+                <div className="comment-box">
+                    <div className="comment-box-title">
+                        Comment as {user ? <span className="username-highlight">{user.username}</span> : "Loading..."}:
+                    </div>
+                    <input className="comment-box-description" placeholder="Comment your thoughts"/>
+                </div>
+                <div className="discussion-container">
+                    <div className="filter-box">
+                        Sort by: <span className="filter-comment">Best</span> ▼
+                    </div>
+                    <div className="discussion-box">
+                        <div className="discussion-username">
+                            TheAmazingKong has commented:
+                        </div>
+                        <div className="discussion-comment">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Nullam eget justo id justo luctus iaculis. 
+                            Sed vel urna vel mi euismod pellentesque eu vitae lorem. 
+                            Vivamus auctor elit eu nunc dignissim, 
+                            ac varius elit iaculis. 
+                            Fusce tristique ultrices ante, at feugiat dui tristique ut. 
+                            Nullam bibendum cursus elit, nec feugiat nulla iaculis at. 
+                            Sed euismod nisl ut elit malesuada, a posuere dolor feugiat. 
+                            Sed ut tincidunt tortor, nec laoreet libero. 
+                            Maecenas a nunc eros. Vivamus auctor, odio a sc
+                        </div>
+                    </div>
+                    <div className="discussion-box">
+                        <div className="discussion-username">
+                            TheDaintyRose has commented:
+                        </div>
+                        <div className="discussion-comment">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Nullam eget justo id justo luctus iaculis. 
+                            Sed vel urna vel mi euismod pellentesque eu vitae lorem. 
+                            Vivamus auctor elit eu nunc dignissim, 
+                            ac varius elit iaculis. 
+                            Fusce tristique ultrices ante, at feugiat dui tristique ut. 
+                            Nullam bibendum cursus elit, nec feugiat nulla iaculis at. 
+                            Sed euismod nisl ut elit malesuada, a posuere dolor feugiat. 
+                            Sed ut tincidunt tortor, nec laoreet libero. 
+                            Maecenas a nunc eros. Vivamus auctor, odio a sc
+                        </div>
                     </div>
                 </div>
             </div>
