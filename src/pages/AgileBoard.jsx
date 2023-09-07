@@ -2,6 +2,7 @@ import React from "react";
 import './AgileBoard.css';
 import Header from './../components/Header';
 import { useNavigate } from "react-router-dom";
+import AgileBoardStack from "../components/AgileBoardStack";
 
 
 function AgileBoard(){
@@ -15,68 +16,24 @@ function AgileBoard(){
     return (
         <>
             <Header />
-            <form>
-                <div className="agile-board-container">
-                    <div className="agile-form-box">
-                        <div className="agile-form-title">
-                            Agile Board Form
-                        </div>
-                        <div className="agile-columns">
-                            <div className="agile-form-column">
-                                <div className="column-title">
-                                    Column 1
-                                </div>
-                                <input></input>
-                            </div>
-                            <div className="agile-form-column">
-                                <div className="column-title">
-                                    Column 2
-                                </div>
-                                <input></input>
-                            </div>
-                            <div className="agile-form-column">
-                                <div className="column-title">
-                                    Column 3
-                                </div>
-                                <input></input>
-                            </div>
-                        </div>
-                        <div className="agile-rows">
-                            <div className="agile-form-row">
-                                <div className="row-title">
-                                    Row 1
-                                </div>
-                                <input></input>
-                            </div>
-                            <div className="agile-form-column">
-                                <div className="row-title">
-                                    Row 2
-                                </div>
-                                <input></input>
-                            </div>
-                            <div className="agile-form-column">
-                                <div className="row-title">
-                                    Row 3
-                                </div>
-                                <input></input>
-                            </div>
-                        </div>
-                        <div className="submit-box">
-                            <button
-                                className="create-agile-button"
-                            >
-                                Create Agile Board
-                            </button>
-                            <button 
-                                className="cancel-button"
-                                onClick={handleCancelButton}
-                            >
-                                Cancel
-                            </button>
-                        </div>
+            <div className="agile-big-box">
+                <div className="agile-box">
+                    <div className="first-square" />
+                    <div className="first-square">
+                        To Do Section: 
+                    </div>
+                    <div className="first-square">
+                        In Progession: 
+                    </div>
+                    <div className="first-square">
+                        Completed: 
                     </div>
                 </div>
-            </form>
+            </div>
+            <AgileBoardStack content="Desgin Phase" />
+            <AgileBoardStack content="Coding Phase" />
+            <AgileBoardStack content="Unit Testing Phase" />
+
         </>
     )
 };

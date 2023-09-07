@@ -1,0 +1,56 @@
+.sticky-note{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    width: 100%;
+
+
+}
+
+.sticky-note-container{
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+
+    width: 90%;
+
+    margin: 5px;
+    padding: 5px;
+
+    transition: transform 0.3s;
+
+}
+
+.sticky-note-container:hover{
+    transform: scale(0.9);
+    transition-delay: 0.1s;
+}
+
+.sticky-note-add{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    margin: 5px;
+    padding: 5px;
+
+    font-weight: bold;
+    font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s;
+
+}
+
+.sticky-note-add:hover{
+    transform: scale(0.9);
+    transition-delay: 0.1s;
+
+}
