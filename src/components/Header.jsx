@@ -27,6 +27,10 @@ function Header(){
         navigate(`/profilepage/${userId}`);
     }
 
+    const chatPage = () => {
+        navigate('/chatpage');
+    }
+
 
     // useEffect(() => {
     //     console.log(id);
@@ -54,7 +58,10 @@ function Header(){
             </div>
 
             <div className="personal-setting">
-                <div className="personal-box">
+                <div 
+                    className="personal-box"
+                    onClick={chatPage}
+                >
                     <img src={ChatIcon} className="NavIcons" />
                 </div>
                 <div className="personal-box">
