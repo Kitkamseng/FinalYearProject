@@ -1,0 +1,57 @@
+.agileboard-main-container{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #91947a;
+
+    margin: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ab-first-container{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; */
+
+    width: 90%;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.ab-first-three{
+    border-right-width: black;
+    border-right-width: 2px;
+    border-right-style: solid;
+
+    width: 25%;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.note-container{
+    border-right-width: black;
+    border-right-width: 2px;
+    border-right-style: solid;
+
+
+    display: flex;
+    flex-direction: row;
+
+    width: 33%;
+}
