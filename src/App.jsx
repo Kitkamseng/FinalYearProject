@@ -12,6 +12,7 @@ import AgileBoard from './pages/AgileBoard';
 import ProfilePage from './pages/ProfilePage';
 import EditPostCreation from './pages/EditPostPage';
 import ChatPage from './pages/ChatPage';
+import StickyNotePage from './pages/StickyNotePage';
 
 function App() {
 
@@ -63,6 +64,10 @@ function App() {
         <Route 
           exact path='/chatpage' 
           Component={ChatPage} 
+        />
+        <Route 
+          exact path='/StickyNotePage' 
+          Component={StickyNotePage} 
         />
       </Routes>
     </Router>

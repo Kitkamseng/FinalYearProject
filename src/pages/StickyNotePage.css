@@ -1,0 +1,415 @@
+.stickynote-main-container{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+
+    margin: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stickynote-box{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px; */
+
+    width: 90%;
+
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.stickynote-title{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 10px;
+
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.stickynote-project-box{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* ===================== Box One Content ======================= */
+
+.project-box-one{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+
+    background-color: white;
+
+    width: 50%;
+
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.box-one-title{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    font-weight: bold;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.box-one-image{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box-one-image img{
+    min-width: 150px;
+}
+
+
+.box-one-content{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+
+    background-color: grey;
+
+    margin: 5px;
+}
+
+.box-one-content-title{
+    font-weight: bold;
+    font-size: 20px;
+
+    color: white;
+
+    margin: 5px;
+}
+
+.box-one-description{
+    margin: 5px;
+
+    color: white;
+}
+
+.box-system-container{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.system-like{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.system-dislike{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.system-comment{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.system-save{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* ===================== Box Two Content ======================= */
+
+
+.project-box-two{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+
+    background-color: white;
+
+    width: 50%;
+
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box-two-title{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    font-weight: bold;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.box-two-image{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box-two-image img{
+    min-width: 150px;
+}
+
+
+.box-two-content{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+
+    background-color: grey;
+
+    margin: 5px;
+}
+
+.box-two-content-title{
+    font-weight: bold;
+    font-size: 20px;
+
+    color: white;
+
+    margin: 5px;
+}
+
+.box-two-description{
+    margin: 5px;
+
+    color: white;
+}
+
+.box-system-container{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.system-like{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.system-dislike{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.system-comment{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.system-save{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+/* =============== Comments ====================== */
+
+.project-box-comment{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+
+    background-color: #C7B166;
+
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-box-title{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    font-weight: bold;
+    font-size: 20px;
+
+    margin: 5px;
+}
+
+.project-comments{ 
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px; */
+
+    margin: 10px;
+}
+
+.comment-one{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+
+    background-color: #D5C48B;
+
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-one-name{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.comment-one-comment{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    padding: 10px;
+}
+
+.comment-two{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid; 
+    border-radius: 10px;
+
+    background-color: #D5C48B;
+
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-two-name{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.comment-two-comment{
+    /* border-color: black;
+    border-width: 2px;
+    border-style: solid;  */
+
+    padding: 10px;
+}
