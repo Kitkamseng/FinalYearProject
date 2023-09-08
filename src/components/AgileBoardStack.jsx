@@ -1,9 +1,16 @@
 import React from "react";
 import './AgileBoardStack.css';
 import StickyNote from "./StickyNote";
+import { useNavigate } from "react-router-dom";
 
 function AgileBoardStack (props) {
 
+
+    let navigate = useNavigate();
+
+    const handleStickyNote = () =>{
+        navigate('/StickyNotePage');
+    }
 
     return(
         <>
@@ -12,7 +19,10 @@ function AgileBoardStack (props) {
                     <div className="ab-first-three">
                         {props.content}
                     </div>
-                    <div className="note-container">
+                    <div 
+                        className="note-container"
+                        onClick={handleStickyNote}
+                    >
                         <StickyNote 
                             backgroundColor="yellow"
                         />
