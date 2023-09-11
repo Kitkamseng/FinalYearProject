@@ -3,6 +3,10 @@ import './EditPostPage.css';
 import Header from "../components/Header";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
+import profileIcon from '../images/male2Icon.png';
+import Like from '../images/Like.png';
+import Dislike from '../images/Dislike.png';
+import Share from '../images/Share.png';
 
 function EditPostCreation(){
 
@@ -33,7 +37,10 @@ function EditPostCreation(){
             <div className="edit-post-container">
                 <div className="post-card-box">
                     <div className="post-card-title">
-                        {project ? project.postTitle : "Loading...."}
+                        <img src={profileIcon} /> 
+                        <div className="post-title-name">
+                            {project ? project.postTitle : "Loading...."}
+                        </div>
                     </div>
                     <div className="post-card-image-box">
                         {project ? (
@@ -41,6 +48,13 @@ function EditPostCreation(){
                         ) : (
                             "Loading..."
                         )}
+                    </div>
+                    <div className="post-card-user-box">
+                        <div className="post-card-voting">
+                            <img src={Like} className="like-system"/>
+                            <img src={Dislike} className="dislike-system"/>
+                            <img src={Share} className="share-system" />
+                        </div>
                     </div>
                     <div className="post-card-description-box">
                         {project ? project.postDescription : "Loading...."}
