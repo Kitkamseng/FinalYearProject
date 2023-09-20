@@ -34,10 +34,7 @@ function EditUser() {
     const result = await axios.get(`http://localhost:8080/user/${id}`)
     setUser(result.data);
   }
-
-  // const [password, setPassword] = useState("");
-  // const [visible, setVisible] = useState(false);
-
+  
   const handleLogInClick = () => {
     navigate('/login');
   }

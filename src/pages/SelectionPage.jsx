@@ -9,10 +9,12 @@ function SelectionPage() {
 
     let navigate = useNavigate();
 
+    //Navigate to agile board creation
     const handleAgileBoard = () => {
         navigate('/agileboardcreation')
     }
 
+    //Navigate to post creation 
     const handlePostCreate = () => {
         navigate('/postcreation');
     }

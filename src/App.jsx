@@ -16,6 +16,7 @@ import StickyNotePage from './pages/StickyNotePage';
 
 function App() {
 
+  //Using a useState to keep track of log
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (

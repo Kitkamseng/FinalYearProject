@@ -13,7 +13,7 @@ function ProjectCard(){
     const [projects, setProjects] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
 
-
+    //Using userId to retrieve data from backend to load all project and post by userId
     const loadProjects = async () => {
         try{
             const result = await axios.get(`http://localhost:8080/post/${userId}`)
@@ -25,15 +25,7 @@ function ProjectCard(){
 
     }
 
-    // const handleCardClick = (projectId) => {
-    //     const project = projects.find((project) => project.id === projectId);
-    //     if(project) {
-    //         setSelectedProject(project);
-    //         console.log(project)
-    //         navigate(`/editpostcreation/${projectId}`);
-    //     }
-    // }
-
+    //Post/Project will load based on the project id. 
     const handleCardClick = (projectId) => {
         const project = projects.find((project) => project.id === projectId);
         if (project) {
@@ -49,6 +41,7 @@ function ProjectCard(){
 
     return(
         <>
+        {/* Project board will load base on how many post you have in backend */}
         <div className="project-stack-container">
             {projects.length > 0 ? (
                 projects.map(project => (

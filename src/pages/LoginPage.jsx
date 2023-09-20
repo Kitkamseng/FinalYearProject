@@ -13,6 +13,7 @@ function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  //Redirect users to signup page
   const handleSignUpClick = () => {
     navigate('/signup');
   }
@@ -20,6 +21,9 @@ function LoginPage() {
     navigate('/');
   }
 
+  //Using axios to verify user's data 
+  //If user's input verifies, it will redirect user to homepage and return response.data
+  //else return error of unverified data
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -59,8 +63,6 @@ function LoginPage() {
           <span></span>
           <label>Username</label>
         </div>
-
-
         <div class='txt_field'>
           <input 
             type='password'  
@@ -70,16 +72,14 @@ function LoginPage() {
           <span></span>
           <label>Password</label>
         </div>
-
         <div className='pass'>Forgot Password?</div>
-
         <button type="submit">Login</button>
-
         <div className='signup_link'>
           Not a member? <a href='#' onClick={handleSignUpClick}>Sign Up</a>
         </div>
        </form>
     </div>
+    {/* return error/success message */}
     <ToastContainer position='bottom-right' />
     </>
   );

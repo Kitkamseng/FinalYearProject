@@ -16,7 +16,7 @@ function EditPostCreation(){
 
     const [user, setUser] = useState(null);
 
-
+    //Using axios to fetch user's data in MySQL 
     const loadUser = async () => {
         try{
             const result = await axios.get(`http://localhost:8080/user/${project.userId}`);
@@ -26,6 +26,7 @@ function EditPostCreation(){
         }
     };
 
+    //On first render, it will load the user's data
     useEffect(() => {
         loadUser();
     }, [])
@@ -34,6 +35,7 @@ function EditPostCreation(){
     return(
         <>
             <Header />
+            {/* Loading post based on postID and userID */}
             <div className="edit-post-container">
                 <div className="post-card-box">
                     <div className="post-card-title">
@@ -66,6 +68,7 @@ function EditPostCreation(){
                     </div>
                     <input className="comment-box-description" placeholder="Comment your thoughts"/>
                 </div>
+                {/* Feedback system to be implemented in the future */}
                 <div className="discussion-container">
                     <div className="filter-box">
                         Sort by: <span className="filter-comment">Best</span> ▼

@@ -3,7 +3,7 @@ import { useState } from "react";
 import './ImageDropBox.css';
 
 
-
+//Handles image input into system
 const ImageDropBox = ({ onImageAdded }) => {
     const [dragOver, setDragOver] = useState(false);
   

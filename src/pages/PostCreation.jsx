@@ -10,6 +10,8 @@ import axios from "axios";
 function PostCreation(){
     let navigate = useNavigate();
 
+    //using localStorage to get userID to store it as userId
+    //Purpose is to send userId back into backend to store it when user creates post
     const userId = localStorage.getItem("userId");
 
     const [selectedImage, setSelectedImage] = useState(null);
@@ -18,6 +20,7 @@ function PostCreation(){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
 
+    //To handle all image uploads into system
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
 
@@ -45,21 +48,18 @@ function PostCreation(){
         }
     };
 
+    //Once all input has been filled in, handleFormSubmit will
+    //send the data back into backend 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         
+        //appending the 4 main data into backend to store
         const formData = new FormData();
         formData.append('image', selectedImage);
         formData.append('postTitle', title);
         formData.append('postDescription', description);
         formData.append('userId', userId);
-
-        // console.log("Data being sent to the backend:", formData);
-        // console.log("postTitle:", formData.get("postTitle"));
-        // console.log("postDescription:", formData.get("postDescription"));
-        // console.log("image:", formData.get("image"));
-
-
+        //using axios post to send formData into backend. 
         try{
             const response = await axios.post("http://localhost:8080/post", formData, {
                 headers:{
@@ -81,6 +81,7 @@ function PostCreation(){
       };
 
 
+    //Redirect back to selection page
     const handleCancelButton = () => {
         navigate('/selectionpage');
     }
@@ -100,9 +101,6 @@ function PostCreation(){
                                 onChange={(e) => setTitle(e.target.value)}
                             />
                         </div>
-
-
-
                         <div className="post-images-container">
                             <div className="image-title">
                                 Insert Image:
@@ -126,9 +124,6 @@ function PostCreation(){
                                 )}
                             </div>
                             <br />
-
-
-
                             <div className="image-description-container">
                                 <label htmlFor="description">Description:</label>
                                 <textarea

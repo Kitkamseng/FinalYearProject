@@ -31,11 +31,7 @@ function Header(){
         navigate('/chatpage');
     }
 
-
-    // useEffect(() => {
-    //     console.log(id);
-    // }, [])
-
+    //Handles all Header inputs
     return(
         <div className="header-container">
             <img 

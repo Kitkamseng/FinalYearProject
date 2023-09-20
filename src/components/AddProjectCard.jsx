@@ -8,6 +8,8 @@ function AddProjectCard () {
 
     let navigate = useNavigate();
 
+    //If users want to add more project or post
+    //Redirect to selection page
     const handleAddCard = () =>{
         navigate('/selectionpage')
     }

@@ -18,12 +18,8 @@ function HomePage(){
         navigate('/signup');
     }
 
-
-    console.log(userId);
-
     return(
         <>
-
         <div className="main-container">
             <Header />
             <div className="cat-container">
@@ -101,6 +97,7 @@ function HomePage(){
                 </div>
             </div>
             <br />
+            {/* Calling all of your personal project component */}
             <PersonalProjects />
 
         </div>

@@ -8,6 +8,7 @@ function AgileBoardStack (props) {
 
     let navigate = useNavigate();
 
+    //Navigate to Sticky note page
     const handleStickyNote = () =>{
         navigate('/StickyNotePage');
     }

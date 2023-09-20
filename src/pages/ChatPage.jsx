@@ -15,6 +15,8 @@ function ChatPage() {
     return(
         <>
             <Header />
+            {/* Implementing a chat page look */}
+            {/* To be completed with functional chatpage */}
             <div className="chatbox-container"> 
                 <div className="chatbox-left">
                     <div className="chatbox-title">

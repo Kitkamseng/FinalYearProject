@@ -21,6 +21,9 @@ function SignUpPage() {
     setUser({...user, [e.target.name]: e.target.value })
   }
 
+
+  //Once user has keyed in all the information needed
+  //data is being send into backend using axios
   const onSubmit = async (e) => {
     e.preventDefault();
     try{

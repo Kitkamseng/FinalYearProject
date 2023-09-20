@@ -9,6 +9,7 @@ import AddProjectCard from "../components/AddProjectCard";
 
 function ProfilePage(){
 
+    //using localStorage to get userId to load profile
     const userId = localStorage.getItem("userId");
 
     const[user, setUser] = useState({
@@ -17,12 +18,14 @@ function ProfilePage(){
         password: ""
     });
 
+    //using userId and axios to retrieve data from backend
     const loadUser = async () => {
         const result = await axios.get(`http://localhost:8080/user/${userId}`)
         setUser(result.data);
     }
 
 
+    //load user info on first render
     useEffect(() => {
         loadUser();
     }, []);
@@ -93,6 +96,7 @@ function ProfilePage(){
                         <ProjectCard />
                     </div>
                 </div>
+                {/* Load personal projects in profile page */}
                 <div className="profile-project-container">
                     <div className="profile-project-title">
                         Personal Project: 

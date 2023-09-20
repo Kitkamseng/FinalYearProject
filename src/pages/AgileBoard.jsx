@@ -16,6 +16,7 @@ function AgileBoard(){
     return (
         <>
             <Header />
+            {/* Setting agile board's column */}
             <div className="agile-big-box">
                 <div className="agile-box">
                     <div className="first-square" />
@@ -30,6 +31,7 @@ function AgileBoard(){
                     </div>
                 </div>
             </div>
+            {/* Setting agile board's row */}
             <AgileBoardStack content="Desgin Phase" />
             <AgileBoardStack content="Coding Phase" />
             <AgileBoardStack content="Unit Testing Phase" />

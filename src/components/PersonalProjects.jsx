@@ -9,7 +9,7 @@ function PersonalProjects(){
 
     let navigate = useNavigate();
 
-
+    //Redirect to selection page
     const handleCreatePost= () => {
         navigate('/selectionpage');
     }
